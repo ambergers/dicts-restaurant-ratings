@@ -9,9 +9,18 @@ def get_ratings(file):
 
         ## give the user choices
         while True:
-            user_choice = input("Enter 1 to see all ratings in alphabetical order, 2 to add a new restaurant, 3 to quit: ")
+            user_choice = input("""
+Enter 1 to see all ratings in alphabetical order, 
+      2 to add a new restaurant, 
+      3 to quit: """
+                                )
             while user_choice not in ('1', '2', '3'):
-                user_choice = input("Sorry, that wasn't one of the choices. Please enter 1 to see all ratings, 2 to add a new restaurant, 3 to quit: ")
+                user_choice = input("""
+Sorry, that wasn't one of the choices. Please enter 
+1 to see all ratings, 
+2 to add a new restaurant, 
+3 to quit: """
+                                    )
             if user_choice == "3":
                 break
 
