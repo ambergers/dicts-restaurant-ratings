@@ -8,6 +8,17 @@ def get_ratings(file):
         restaurant_ratings = {}
         user_restaurant = input("Please enter a restaurant name: ")
         user_rating = input("Please enter your 1-5 rating for that restaurant: ")
+        # when would you use try/except? 
+        while True:
+            try:
+                user_rating_int = int(user_rating)
+                if user_rating_int not in range(1, 6):
+                    user_rating = input("Out of range - Please enter a valid integer from 1-5: ")
+                    continue
+                break
+            except ValueError:
+                user_rating = input("Please enter a valid integer from 1-5: ")
+
         for line in ratings:
             line = line.rstrip()
             line = line.split(":")
